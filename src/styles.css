@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Montserrat, Helvetica, sans-serif;
+}
+
+.navbar-roxa {
+    background-color: #2b0a3d;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+app-root {
+    display: block;
+    min-height: 100vh;
+}
+
+.pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    flex: 1;
+}
