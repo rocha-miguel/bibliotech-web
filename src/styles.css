@@ -2,27 +2,40 @@
     font-family: Montserrat, Helvetica, sans-serif;
 }
 
-.navbar-roxa {
+main {
+    height: 100.vh;
+}
+
+.bg-roxo {
     background-color: #2b0a3d;
 }
 
-html,
-body {
-    height: 100%;
-    margin: 0;
+.text-roxo {
+    color: #2b0a3d
 }
 
-app-root {
-    display: block;
-    min-height: 100vh;
+.btn-roxo {
+    background-color: #2b0a3d !important;
+    border-color: #2b0a3d !important;
+    color: white !important;
 }
 
-.pagina {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.btn-roxo:hover {
+    background-color: #4a1480 !important;
+    border-color: #4a1480 !important;
+    color: white !important;
 }
 
-.conteudo {
-    flex: 1;
+
+
+.btn-dourado {
+    background-color: #f2c94c !important;
+    border-color: #f2c94c !important;
+    color: black !important;
+}
+
+.btn-dourado:hover {
+    background-color: #ffd166 !important;
+    border-color: #ffd166 !important;
+    color: black !important;
 }
