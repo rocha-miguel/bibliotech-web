@@ -1,0 +1,39 @@
+<div class="card card-body p-4 m-5 sombra-roxa">
+
+    <h2 class="text-roxo fw-bold">Livros</h2>
+
+    <p class="fs-5">Lista de livros cadastrados:</p>
+    
+
+    @if (livros.length === 0) {
+
+    <p class="text-muted mb-0">
+        Nenhum livro cadastrado. <a class="text-decoration-none text-roxo" href="cadastrar">Clique aqui</a> para
+        cadastrar um livro.
+    </p>
+    
+
+    }
+
+    <ul class="list-group">
+
+        @for (livro of livros(); track livro.id) {
+
+        <li class="list-group-item">
+            <strong>Id: {{livro.id}}</strong><br>
+            <strong>Nome: {{livro.nome}}</strong><br>
+            <strong>Editora: {{livro.editora}}</strong><br>
+            <strong>Autor: {{livro.autor}}</strong><br>
+            <strong>Status: {{livro.status}}</strong><br>
+        </li>
+
+        }
+
+
+    </ul>
+
+</div>
+
+@if (livros().length === 0) {
+    <main></main>
+}
