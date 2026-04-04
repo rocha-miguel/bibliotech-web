@@ -39,3 +39,7 @@ main {
     border-color: #ffd166 !important;
     color: black !important;
 }
+
+.sombra-roxa {
+    box-shadow: 0 .5rem 1rem rgba(43, 10, 61, .35);
+}

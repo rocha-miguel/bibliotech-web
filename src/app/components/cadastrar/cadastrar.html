@@ -1,4 +1,4 @@
-<div class="card card-body p-4 m-5 shadow">
+<div class="card card-body p-4 m-5 sombra-roxa">
 
     <h2 class="text-roxo fw-bold">Cadastro de Livros</h2>
 
@@ -6,77 +6,77 @@
     <hr>
 
 
-    <form>
+    <form [formGroup]="formulario" (ngSubmit)="cadastrar()" class="">
 
-        <div class="form-floating mb-3 ">
+        <div class="form-floating mb-3">
             <input formControlName="nome" class="form-control" type="text" placeholder="">
             <label for="">Informe o nome do livro:</label>
 
         </div>
 
         <div class="form-floating mb-3 ">
-            <input formControlName="nome" class="form-control" type="text" placeholder="">
+            <input formControlName="editora" class="form-control" type="text" placeholder="">
             <label for="">Informe a editora:</label>
 
         </div>
 
         <div class="form-floating mb-3 ">
-            <input formControlName="nome" class="form-control" type="text" placeholder="">
+            <input formControlName="autor" class="form-control" type="text" placeholder="">
             <label for="">Informe o autor:</label>
 
         </div>
 
         <div class="form-floating mb-3 ">
-            <input formControlName="nome" class="form-control" type="number" placeholder="">
+            <input formControlName="quantidade" class="form-control" type="number" placeholder="">
             <label for="">Informe a quantidade em estoque:</label>
 
         </div>
 
         <div class="form-floating mb-3 ">
-            <input formControlName="nome" class="form-control" type="number" placeholder="">
+            <input formControlName="quantidadePaginas" class="form-control" type="number" placeholder="">
             <label for="">Informe a quantidade de páginas:</label>
 
         </div>
 
         <div class="form-floating mb-3 ">
-            <input formControlName="nome" class="form-control" type="number" placeholder="">
+            <input formControlName="anoEdicao" class="form-control" type="number" placeholder="">
             <label for="">Informe o ano da edição:</label>
 
         </div>
 
         <div class="form-floating mb-3 ">
 
-            <select class="form-select" aria-label="Default select example">
-                <option selected disabled>Selecione o tipo:</option>
-                <option value="1">Capa mole</option>
-                <option value="2">Capa dura</option>
-                <option value="3">Ebook</option>
+            <select formControlName="tipoLivro" class="form-select">
+                <option [ngValue]="0" disabled>Selecione o tipo:</option>
+                <option [ngValue]="1">Capa mole</option>
+                <option [ngValue]="2">Capa dura</option>
+                <option [ngValue]="3">Ebook</option>
             </select>
             <label for="">Tipo do livro</label>
 
         </div>
 
         <div class="form-floating mb-3 ">
-            
-            <select class="form-select" aria-label="Default select example">
-                <option selected disabled>Selecione o gênero:</option>
-                <option value="1">Ficção</option>
-                <option value="2">Fantasia</option>
-                <option value="3">Romance</option>
-                <option value="4">Terror</option>
-                <option value="5">HQ</option>
-                <option value="6">Autoajuda</option>
-                <option value="7">Religião</option>
-                <option value="8">Sociologia</option>
-                <option value="9">Filosofia</option>
-                <option value="10">Suspense</option>
+
+            <select formControlName="generoLivro" class="form-select">
+                <option [ngValue]="0" disabled>Selecione o gênero:</option>
+                <option [ngValue]="1">Ficção</option>
+                <option [ngValue]="2">Fantasia</option>
+                <option [ngValue]="3">Romance</option>
+                <option [ngValue]="4">Terror</option>
+                <option [ngValue]="5">HQ</option>
+                <option [ngValue]="6">Autoajuda</option>
+                <option [ngValue]="7">Religião</option>
+                <option [ngValue]="8">Sociologia</option>
+                <option [ngValue]="9">Filosofia</option>
+                <option [ngValue]="10">Suspense</option>
             </select>
             <label for="">Gênero do livro</label>
 
         </div>
 
-        <div class="mb-3">
-            <input type="submit" value="Realizar Cadastro" class="btn btn-outline-success">
+        <div class="mb-3 text-center">
+            <input type="submit" value="Realizar Cadastro" class="btn btn-roxo btn-lg px-5">
         </div>
 
     </form>
