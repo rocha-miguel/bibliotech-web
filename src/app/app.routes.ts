@@ -4,7 +4,8 @@ import { Cadastrar } from './components/cadastrar/cadastrar';
 import { Livros } from './components/livros/livros';
 
 export const routes: Routes = [
-    {path: '', component: Home},
+    {path: 'home', component: Home},
     {path: 'cadastrar', component: Cadastrar},
-    {path: 'livros', component: Livros}
+    {path: 'livros', component: Livros},
+    {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
