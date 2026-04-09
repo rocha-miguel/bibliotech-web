@@ -10,7 +10,6 @@ Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas e
 * **[Bootstrap](https://getbootstrap.com/) (v5)** - Framework CSS para estruturação responsiva e componentes estilizados rapidamente.
 * **[Bootstrap Icons](https://icons.getbootstrap.com/)** - Biblioteca de ícones integrada.
 * **[TypeScript](https://www.typescriptlang.org/)** - Tipagem estática e recursos avançados para o JavaScript.
-* **[Vitest](https://vitest.dev/)** - Framework ultrarrápido para testes unitários.
 
 ## ⚙️ Funcionalidades
 
@@ -63,14 +62,5 @@ npm run build
 
 Os arquivos estáticos minificados e otimizados serão gerados dentro do diretório `dist/`.
 
-## 🧪 Executando os Testes Unitários
-
-Este projeto utiliza o Vitest como "test runner". Execute o comando a seguir para rodar todos os testes configurados:
-
-```bash
-npm run test
-```
-
----
 
 > _Projeto gerado inicialmente com o [Angular CLI](https://github.com/angular/angular-cli) versão 21.2.3._
