@@ -1,3 +1,27 @@
 main{
     height: 23.8dvh;
 }
+
+.list-group {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.livro-item {
+    border: none;
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.livro-item:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(111, 66, 193, 0.18);
+    background-color: #fcfbff;
+}
+
+.livro-item:active {
+    transform: translateY(-2px) scale(0.995);
+}

@@ -1,0 +1,109 @@
+<div class="card card-body p-4 m-5 sombra-roxa">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h2 class="text-roxo fw-bold mb-1">Detalhes do Livro</h2>
+            <p class="fs-5 mb-0">Informações completas do livro selecionado:</p>
+        </div>
+
+        <a routerLink="/livros" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Voltar
+        </a>
+    </div>
+
+    <hr>
+
+    @if (livro()) {
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Id</small>
+                    <strong>{{ livro().id }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Nome</small>
+                    <strong>{{ livro().nome }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Editora</small>
+                    <strong>{{ livro().editora }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Autor</small>
+                    <strong>{{ livro().autor }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Quantidade</small>
+                    <strong>{{ livro().quantidade }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Páginas</small>
+                    <strong>{{ livro().quantidadePaginas }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Ano de edição</small>
+                    <strong>{{ livro().anoEdicao }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Tipo do livro</small>
+                    <strong>{{ tiposLivro[livro().tipoLivro] }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Gênero</small>
+                    <strong>{{ generos[livro().generoLivro] }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Status</small>
+                    <strong>{{ statusLivro[livro().status] }}</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <small class="text-muted d-block">Data de cadastro</small>
+                    <strong>{{ livro().dataHoraCadastro }}</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex gap-2 mt-4">
+            <a [routerLink]="['/atualizar', livro().id]" class="btn btn-outline-primary">
+                <i class="bi bi-pencil-square"></i> Atualizar
+            </a>
+        </div>
+    }
+
+    @if (!livro()) {
+        <p class="text-muted mb-0">Nenhum livro encontrado.</p>
+    }
+
+</div>
